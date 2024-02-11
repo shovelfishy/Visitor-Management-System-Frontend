@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../api/axiosConfig.js";
 import {useEffect, useState} from 'react';
 import "./User.css";
-import jwt from 'jsonwebtoken';
+// import jwt from 'jsonwebtoken';
 
 // function handleChange(e:React.ChangeEvent<HTMLInputElement>){
 //   const {name, value} = e.target
@@ -40,8 +40,8 @@ function Login() {
           'Content-Type': 'application/json'
         }
       });
-      const token = jwt.sign({ foo: 'bar' }, 'shhhhh');
-      console.log(token)
+      // const token = jwt.sign({ foo: 'bar' }, 'shhhhh');
+      // console.log(token)
       console.log(res.data);
       if(res.data == "SUCCESS"){
         navigate("/")

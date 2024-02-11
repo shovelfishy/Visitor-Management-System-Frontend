@@ -4,8 +4,6 @@ import ButtonComponent from "../components/ButtonComponent";
 import axios from "axios";
 import api from "../api/axiosConfig";
 import VisitorListComponent from "../components/VisitorListComponent";
-import { log, time } from "console";
-
 
 function User() {
 
