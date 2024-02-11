@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url(fonts/SF-Pro-Display-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url(fonts/SF-Pro-Display-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url(fonts/SF-Pro-Display-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url(fonts/SF-Pro-Display-Thin.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: url(fonts/SF-Pro-Display-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(fonts/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 600;
+  src: url(fonts/Outfit-Black.ttf);
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 500;
+  src: url(fonts/Outfit-SemiBold.ttf);
+}
+
+:root {
+  color-scheme: light dark;
+  color: white;
+  background-color: black;
+
+  --red: #B82601;
+  --blue: #206194;
+}

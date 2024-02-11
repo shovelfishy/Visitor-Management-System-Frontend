@@ -1,0 +1,186 @@
+.user.container h1 {
+    font: bold 50px Outfit;
+}
+
+.user.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    gap: 50px;
+    transition: all 0.5s ease;
+}
+
+.user.container.open {
+    left: 25%;
+}
+
+.user.grid {
+    box-sizing: border-box;
+    display: grid;
+    row-gap: 40px;
+    column-gap: 50px;
+    width: 100%;
+    height: fit-content;
+    place-items: center;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.user .button-container {
+    width: 100%;
+    position: relative;
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 1000px) 
+{
+    .user.grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hamburger-menu.open{
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hamburger-menu{
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: -78px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hamburger-menu span{
+    height: 4px;
+    background: white;
+    margin: 3px 0;
+    transition: .3s ease-in-out
+}
+
+span:nth-of-type(1){
+    width: 100%;
+}
+span:nth-of-type(2){
+    width: 72%;
+}
+span:nth-of-type(3){
+    width: 72%;
+    position: absolute;
+    top: 13px;
+    margin: 0;
+}
+
+span:nth-of-type(4){
+    width: 45%;
+}
+
+.open span:nth-of-type(1), .open span:nth-of-type(4){
+    width: 0%;
+    opacity: 0;
+}
+.open span:nth-of-type(2){
+    width: 45%;
+    transform: rotatez(-45deg) translate(50%, 50%);
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.open span:nth-of-type(3){
+    width: 45%;
+    transform: rotatez(45deg) translate(50%, -50%);
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 3px solid white;
+    border-radius: 0 12px 12px 0;
+    box-sizing: border-box;
+    width: 25%;
+    position: absolute;
+    inset: 0;
+    left: -25%;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 3px solid white;
+    border-radius: 0 12px 12px 0;
+    box-sizing: border-box;
+    width: 25%;
+    position: absolute;
+    inset: 0;
+}
+
+.sidebar h1 {
+    position: absolute;
+    top: 53px;
+    left: 15%;
+    font: 600 35px Outfit;
+}
+
+/* set scroller-offset to offset scrollbar */
+.scroller{
+    --scroller-offset: 20px;
+    position: absolute;
+    top: 135px;
+    width: calc(100% - var(--scroller-offset));
+    height: calc(100% - 150px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    --mask: linear-gradient(to bottom, rgba(0,0,0, 1) 0,rgba(0,0,0, 1) 95%, rgba(0,0,0, 0) 100%);
+    mask: var(--mask);
+    -webkit-mask: var(--mask);
+}
+
+.visitor-list{
+    position: relative;
+    left: calc((15% + (0.15 * var(--scroller-offset))));
+    display: flex;
+    flex-direction: column;
+    column-gap: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+::-webkit-scrollbar-track {
+    margin-bottom: 30px;
+}
+
+.warning-text {
+    position: absolute;
+    top: 105%;
+    color: rgb(243, 60, 60);
+    font: 300 20px SF Pro;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1000px) 
+{
+    .warning-text {
+        top: 102%;
+    }
+}

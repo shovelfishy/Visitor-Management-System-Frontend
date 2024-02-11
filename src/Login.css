@@ -1,0 +1,125 @@
+h1 {
+  font: bold 45px Outfit;
+  letter-spacing: 5px;
+  margin: 0;
+  user-select: none;
+  /* text-shadow: 0px 0 30px #7952a5, 0px 0 30px #7952a5, 0px 0 30px #7952a5,
+    0px 0 50px #3f55c6, 0px 0 50px #3f55c6, 0px 0 50px #3f55c6,
+    0px 0 80px #6fa2d0, 0px 0 90px #6fa2d0, 0px 0 80px #6fa2d0; */
+}
+
+.container#glow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 58px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.glow {
+  border-radius: 30px;
+  background: radial-gradient(
+    79.11% 78.95% at 50% 50%,
+    rgba(121, 82, 165, 1) 0%,
+    rgba(63, 85, 198, 1) 52.08%,
+    rgba(111, 162, 208, 1) 100%
+  );
+  width: 110%;
+  height: 105%;
+  filter: blur(30px);
+  position: absolute;
+  z-index: -1;
+}
+
+.container#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  transform: scale(125%);
+}
+
+form#login {
+  width: 95%;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid white;
+  margin: 12px 0px;
+  border-radius: 15px;
+  background-color: #bababa40;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.input input {
+  background: transparent;
+  border: none;
+  padding: 2px 5px;
+  outline: none;
+  font: 300 18px SF Pro;
+  letter-spacing: 2px;
+  margin-left: 15px;
+  width: 100%;
+  margin-top: 0;
+}
+
+::placeholder {
+  color: #9f9f9f;
+}
+
+.logo {
+  height: 24px;
+  margin-left: 5px;
+  user-select: none;
+}
+
+.login {
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  outline: none;
+  font: 22px Outfit;
+  letter-spacing: 3px;
+  width: 100%;
+  border: 3px solid #58A4DF;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .3s;
+  position: relative;
+  z-index: 0;
+}
+
+.login:hover {
+  box-shadow: 0 0 50px 3px rgba(20, 85, 198, 0.6); 
+}
+
+.line {
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+}
+
+.line:nth-child(1) {
+  width: 40%;
+  align-self: flex-start;
+}
+
+.line:nth-child(2) {
+  opacity: 0.35;
+  width: 60%;
+  align-self: flex-end;
+}

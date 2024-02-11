@@ -1,0 +1,31 @@
+#InputComponent input {
+    background: transparent;
+    border: none;
+    padding: 3px 5px;
+    outline: none;
+    font: 400 20px SF Pro;
+    letter-spacing: 2px;
+    margin: 2px 0 2px 15px;
+    width: 100%;
+}
+
+#InputComponent ::placeholder {
+    color: #bebebe;
+}
+
+#InputComponent img {
+    height: 24px;
+    margin-left: 5px;
+    user-select: none;
+}
+
+div #InputComponent  {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #bababa40;
+    display: flex;
+    align-items: center;
+}

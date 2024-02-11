@@ -1,0 +1,47 @@
+.visitor {
+    line-height: 0;
+    font-family: Outfit, sans-serif;
+    letter-spacing: 2px;
+    font-kerning: auto;
+    position: relative;
+    margin: 0;
+    transition: margin 0.3s ease-out;
+    user-select: none;
+    cursor: pointer;
+}
+
+.visitor:hover {
+    /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.3) inset; */
+    margin-left: 20px;
+    transition: margin 0.5s ease-out;
+}
+
+.visitor:before {
+    content: '';
+    border: 3px solid rgba(184, 37, 37, 0.75);
+    border-radius: 10px;
+    position: absolute;
+    height: 80%;
+    left: -18px;
+    top: 47%;
+    transform: translate(0,-50%);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.visitor:hover:before {
+    opacity: 1;
+    transition: opacity .4s ease-out;
+}
+
+.visitor h2 {
+    font-weight: 500;
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+.visitor p {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
