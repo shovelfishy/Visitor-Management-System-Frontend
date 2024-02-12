@@ -94,16 +94,16 @@ form#login {
   font: 22px Outfit;
   letter-spacing: 3px;
   width: 100%;
-  border: 3px solid #58A4DF;
+  border: 3px solid #58a4df;
   margin-top: 20px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
   position: relative;
   z-index: 0;
 }
 
 .login:hover {
-  box-shadow: 0 0 50px 3px rgba(20, 85, 198, 0.6); 
+  box-shadow: 0 0 50px 3px rgba(20, 85, 198, 0.8);
 }
 
 .line {
