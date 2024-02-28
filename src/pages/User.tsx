@@ -19,7 +19,11 @@ function User() {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [warningText, setWarningText] = useState("");
   const location = useLocation();
-  const [residentID, setresidentID] = useState(location.state.userId);
+
+  //TEMPORARY UNTIL JWT
+  const getResidentID = (): string => {
+    return location.state != null ? location.state.userId : "";
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -48,7 +52,7 @@ function User() {
       if (IsCheckInValid()) {
         const res = await api.post("/users/checkin", {
           ...visitorData,
-          residentID: residentID,
+          residentID: getResidentID(),
         });
         setButtonClicked(!buttonClicked);
         setWarningText(duplicateEntry(res) ? "This entry already exists" : "");
@@ -91,7 +95,7 @@ function User() {
           <div className={styles["visitor-list"]}>
             <VisitorListComponent
               buttonClicked={buttonClicked}
-              residentID={residentID}
+              residentID={getResidentID()}
             />
           </div>
         </div>
